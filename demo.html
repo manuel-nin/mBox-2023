@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="assets/mbox.css">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/mbox.js"></script>
+<body style="background-color: salmon; font-family: 'Calibri';">
+
+<h1>mBox Documentation</h1>
+<p>I have created this library to display information to the user in an easy way. The message can be customized. Test the examples below and see it by yourself.</p>
+
+<h3>Example #1</h3>
+<p>Message with a custom image, the image has a custom width of 45px the height is set automatically.</p>
+<a href="javascript:example1();">Display message</a>
+
+<h3>Example #2</h3>
+<p>Message with a success icon and no buttons.</p>
+<a href="javascript:example2();">Display message</a>
+
+<h3>Example #3</h3>
+<p>Message with a warning icon and 2 buttons.</p>
+<a href="javascript:example3();">Display message</a>
+
+<h3>Example #4</h3>
+<p>Message with an error icon and no button</p>
+<a href="javascript:example4();">Display message</a>
+
+<h3>Example #5</h3>
+<p>Display all messages</p>
+<a href="javascript:example5();">Display message</a>
+</body>
+
+<script>
+
+function example1(){
+    mBox("Using mBox you can add a custom image url and a custom image width to the message, like this Gold Medal.", "Ok", "", "", "", "assets/images/medal.png", "45px");
+}
+
+function example2(){
+    mBox("Test message with success icon and no buttons.", "", "", "", "", "assets/images/green.png", "25px");
+}
+
+function example3(){
+    mBox("Message with a warning icon and 2 buttons. Click on CANCEL to callback another function.", "ok", "ok();", "cancel", "cancel();", "assets/images/warning.png", "25px");
+}
+
+function ok(){
+    alert('You have clicked on OK');
+}
+
+function cancel(){
+    alert('You have clicked on CANCEL');
+}
+
+function example4(){
+    mBox("Test message with error icon and no buttons.", "", "", "", "", "assets/images/error.png", "25px");
+}
+
+function example5(){
+    example1();
+    example2();
+    example3();
+    example4();
+}
+
+</script>
